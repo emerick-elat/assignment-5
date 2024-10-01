@@ -1,4 +1,4 @@
-﻿namespace Treads_1
+﻿namespace Threads_1
 {
     internal class Program
     {
