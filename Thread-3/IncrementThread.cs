@@ -15,11 +15,11 @@ namespace Thread_3
             Value = 0;
         }
 
-        public void Increment(int targetNumber)
+        public void Increment(int targetNumber, int index)
         {
             if (Value <= targetNumber)
             {
-                Value++;
+                Value+=index;
             }
         }
     }

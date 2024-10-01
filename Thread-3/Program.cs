@@ -19,7 +19,7 @@ namespace Threads_3
             {
                 IncrementThread iThread = new IncrementThread();
                 threads[i] = new Thread(new ThreadStart(() => { 
-                    iThread.Increment(targetNumber);
+                    iThread.Increment(targetNumber, i+1);
                 }));
                 threads[i].Start();
             }
