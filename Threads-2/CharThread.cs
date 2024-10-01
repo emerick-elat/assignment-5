@@ -15,16 +15,16 @@ namespace Threads_2
             Content = content;
         }
 
-        public void PrintContent()
+        public void PrintContent(ConsoleColor color)
         {
-            //Console.ForegroundColor = color;
+            Console.ForegroundColor = color;
             foreach (char c in Content)
             {
                 Console.Write(c);
-                Thread.Sleep(200);
+                Thread.Sleep(300);
             }
 
-            //Console.ResetColor();
+            Console.ResetColor();
             Console.WriteLine();
         }
     }
