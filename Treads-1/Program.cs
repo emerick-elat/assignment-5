@@ -11,6 +11,11 @@
                 threads[i] = new Thread(new ThreadStart(PrintInformations));
                 threads[i].Start();
             }
+
+            foreach (Thread thread in threads)
+            {
+                thread.Join();
+            }
         }
 
         static void PrintInformations()

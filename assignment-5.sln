@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treads-1", "Treads-1\Treads-1.csproj", "{F6C2ACD3-AB75-4985-97A5-A73CD994F9BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads-1", "Treads-1\Threads-1.csproj", "{F6C2ACD3-AB75-4985-97A5-A73CD994F9BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads-2", "Threads-2\Threads-2.csproj", "{0FDCB672-46FC-42E3-8431-698ECCA6896C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F6C2ACD3-AB75-4985-97A5-A73CD994F9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C2ACD3-AB75-4985-97A5-A73CD994F9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C2ACD3-AB75-4985-97A5-A73CD994F9BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDCB672-46FC-42E3-8431-698ECCA6896C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDCB672-46FC-42E3-8431-698ECCA6896C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDCB672-46FC-42E3-8431-698ECCA6896C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDCB672-46FC-42E3-8431-698ECCA6896C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
