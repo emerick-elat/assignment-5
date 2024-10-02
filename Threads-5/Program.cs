@@ -22,6 +22,8 @@
                 printerThreads[i] = new Thread(new ThreadStart(() => { 
                     printer.Print(stack.Pop());
                 }));
+
+                printerThreads[i].Start();
             }
 
             foreach (Thread printer in printerThreads)
