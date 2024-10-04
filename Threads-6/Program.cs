@@ -35,7 +35,9 @@ namespace Threads_6
             for (int i = 0; i < threads.Length; i++)
             {
                 TimezoneThread timezoneThread = new TimezoneThread(timezones[i]);
-                threads[i] = new Thread(new ThreadStart(timezoneThread.Print));
+                threads[i] = new Thread(new ThreadStart(() => {
+                    timezoneThread.PrintTime(userTimeZone);
+                }));
                 threads[i].Name = timezones[i].ToString();
                 threads[i].Start();
             }

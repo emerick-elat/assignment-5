@@ -9,7 +9,7 @@ namespace Threads_6
     internal sealed class Timezone
     {
         private string Code {  get; set; }
-        private string Description { get; set; }
+        public string Description { get; set; }
         private int Offset { get; set; }
 
         public Timezone(string code, string description, int offset)

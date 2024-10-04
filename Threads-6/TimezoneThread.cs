@@ -15,9 +15,19 @@ namespace Threads_6
             Timezone = timezone;
         }
 
-        public void Print()
+        public void PrintTime(Timezone userTimezone)
         {
-            Console.WriteLine($"Hi I am {Thread.CurrentThread.Name} Thread");
+
+            TimeZoneInfo threadTimeZone = TimeZoneInfo.FindSystemTimeZoneById(Timezone.Description);
+            TimeZoneInfo userTimeZone = TimeZoneInfo.FindSystemTimeZoneById(userTimezone.Description);
+
+            DateTime sourceTime = DateTime.Now;
+
+            DateTime destinationTime = TimeZoneInfo.ConvertTime(sourceTime, threadTimeZone, userTimeZone);
+
+            // Display the result
+            Console.WriteLine($"Thread Time ({threadTimeZone.DisplayName}): {sourceTime}");
+            Console.WriteLine($"User Time ({userTimeZone.DisplayName}): {destinationTime}");
         }
     }
 }
