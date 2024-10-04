@@ -43,5 +43,10 @@
             ConsoleColor[] colors = (ConsoleColor[])ConsoleColor.GetValues(typeof(ConsoleColor));
             return colors[random.Next(colors.Length)];
         }
+
+        ~Program()
+        {
+            mutex.Dispose();
+        }
     }
 }
