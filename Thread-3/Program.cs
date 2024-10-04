@@ -42,7 +42,7 @@ namespace Threads_3
             else
             {
                 cts.Cancel();
-                cts.Dispose();
+                //cts.Dispose();
 
                 Console.WriteLine("Thread terminated gracefully.");
             }

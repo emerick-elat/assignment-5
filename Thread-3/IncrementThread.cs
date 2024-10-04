@@ -19,7 +19,7 @@ namespace Thread_3
 
         public void Run(CancellationTokenSource cts)
         {
-            while (!cts.Token.IsCancellationRequested)
+            while (cts is not null && !cts.Token.IsCancellationRequested)
             {
                 if (Callback is not null)
                 {
