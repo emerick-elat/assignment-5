@@ -10,13 +10,14 @@
             
             int i = 10;
             Console.WriteLine("Content of the Queue:");
-            while (i < 1000)
+            while (i < 130)
             {
                 Console.Write($"{i}, ");
                 stack.Push(i);
                 i += 10;
                 Thread.Sleep(1000);
             }
+            Console.WriteLine();
             i = 0;
             Console.WriteLine("10 last items");
             foreach (string currency in currencies)
