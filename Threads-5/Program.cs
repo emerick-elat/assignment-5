@@ -9,13 +9,16 @@
             Thread[] printerThreads = new Thread[currencies.Length];
             
             int i = 10;
+            Console.WriteLine("Content of the Queue:");
             while (i < 1000)
             {
+                Console.Write($"{i}, ");
                 stack.Push(i);
                 i += 10;
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
             }
             i = 0;
+            Console.WriteLine("10 last items");
             foreach (string currency in currencies)
             {
                 Printer printer = new Printer(currency);
@@ -24,11 +27,12 @@
                 }));
 
                 printerThreads[i].Start();
+                i++;
             }
 
-            foreach (Thread printer in printerThreads)
+            foreach (Thread p in printerThreads)
             {
-                printer.Join();
+                p.Join();
             }
         }
     }
