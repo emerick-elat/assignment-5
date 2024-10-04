@@ -8,19 +8,26 @@ namespace Thread_3
 {
     internal class IncrementThread
     {
-        public int Value { get; set; }
+        public int Increment { get; set; }
+        private IncrementFunc Callback;
 
-        public IncrementThread()
+        public IncrementThread(int increment, IncrementFunc callback)
         {
-            Value = 0;
+            Increment = increment;
+            Callback = callback;
         }
 
-        public void Increment(int targetNumber, int index)
+        public void Run(CancellationTokenSource cts)
         {
-            if (Value <= targetNumber)
+            while (!cts.Token.IsCancellationRequested)
             {
-                Value+=index;
+                if (Callback is not null)
+                {
+                    Callback(Increment, cts);
+                }
             }
         }
     }
+
+    public delegate void IncrementFunc(int increment, CancellationTokenSource cts);
 }
