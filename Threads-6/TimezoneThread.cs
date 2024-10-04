@@ -10,9 +10,14 @@ namespace Threads_6
     {
         public Timezone Timezone { get; set; }
 
-        public TimezoneThread(ref Timezone timezone)
+        public TimezoneThread(Timezone timezone)
         {
             Timezone = timezone;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine($"Hi I am {Thread.CurrentThread.Name} Thread");
         }
     }
 }

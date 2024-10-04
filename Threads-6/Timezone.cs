@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Threads_6
 {
-    internal class Timezone
+    internal sealed class Timezone
     {
-        private string? Code {  get; set; }
-        private string? Description { get; set; }
+        private string Code {  get; set; }
+        private string Description { get; set; }
         private int Offset { get; set; }
+
+        public Timezone(string code, string description, int offset)
+        {
+            Code = code;
+            Description = description;
+            Offset = offset;
+        }
 
         public override string ToString()
         {
